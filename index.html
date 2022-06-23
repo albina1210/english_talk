@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <i class="fas fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="uchastnitsy.html">TESTS</a></li>
+            <li><a href="gallery.html">TEXTS</a></li>
+            <li><a href="video.html">VIDEO LESSONS</a></li>
+          
+          </ul>
+      </div>
+      <i class="fas fa-bars" onclick="showMenu()"></i>
+    <div class="text-box">
+      <h1>ENGLISH TALK</h1>
+      <p><b>Learn English easy!</b></p>
+    </div>
+  </header>
+  <!--Sostav-->
+  <section class="sostav"> 
+  </section>
+  <!--End gallery-->
+ 
+ <script>
+
+  let navLinks = document.getElementById('navLinks');
+  function showMenu() {
+    navLinks.style.right = '0';
+  }
+  function hideMenu() {
+    navLinks.style.right = '-200px';
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/553acfa497.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

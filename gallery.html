@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXTS</title>
+    
+    <link rel="stylesheet" href="style/gallery.css">
+</head>
+<body>
+  <header>
+    <nav>
+
+      <div class="nav-links" id="navLinks">
+        <i class="fas fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="uchastnitsy.html">TESTS</a></li>
+          <li><a href="gallery.html">TEXTS</a></li>
+          <li><a href="video.html">VIDEO LESSONS</a></li>
+        
+        </ul>
+      </div>
+      <i class="fas fa-bars" onclick="showMenu()"></i>
+  </header>
+
+      <section class="gallery">
+        <h1 class="h1">TEXTS</h1>
+        <h1>Introduction to Python</h1>
+        <p>The Python programming language was created in 1991 by the Dutchman Guido van Rossum.</p><br>
+
+          <p>His name - Python (or Python) - received from the name of the television series, and not the reptile.</p><br>
+          
+          <p>After Rossum developed the language, he released it to the Internet, where the programming community joined in to improve it.</p><br>
+          
+          
+          <p>Python is actively developing now. New versions are released frequently. Until recently, two separate branches of the language were supported: Python 2.x and Python 3.x. Here, the English letter "x" denotes a specific release. There is a slight difference between the second and third Python. Support for Python 2 is currently deprecated.</p><br>
+
+          <h1>Python programming language</h1>
+<p>Python is a high-level general-purpose programming language that is also used to develop web applications. The language is focused on improving developer productivity and code readability.</p>
+
+<p>The correct Russian pronunciation of the name of the programming language is Python, but the distorted one is more often used - Python.</p>
+
+<p>Python supports several programming paradigms: structural, object-oriented, functional, imperative, and aspect-oriented. The language has dynamic typing, automatic memory management, full introspection, an exception handling mechanism, support for multi-threaded computations, and convenient high-level data structures. Python code is organized into functions and classes, which can be combined into modules, which in turn can be combined into packages. Python is usually used as interpreted, but can be compiled to Java bytecode and to MSIL (within the .NET platform).</p>
+
+<p>The developers of the Python language adhere to a certain programming philosophy called "The Zen of Python" ("Zen of Python" or "Zen of Python"):</p>
+
+  <li class="li">Beautiful is better than ugly.</li>
+  <li class="li">Explicit is better than implicit.</li>
+  <li class="li">Simple is better than complex.</li>
+  <li class="li">Complicated is better than confusing.</li>
+  <li class="li">Flat is better than nested.</li>
+
+<p>Compared to Ruby and some other languages, Python lacks the ability to modify built-in classes such as int, str, float, list, and others.</p>
+
+<p>Python has a global interpreter lock (GIL) - during its work, the main interpreter constantly uses a large amount of thread-unsafe data. Basically, these are dictionaries that store the attributes of objects, and access to external code, therefore, in order to avoid the destruction of this data during joint modification from different threads, before the execution of several instructions (usually a hundred), the interpreter thread captures the GIL, and releases it at the end.</p>
+
+<p>There are several implementations of the language - CPython (main), Jython, PyS60, IronPython, Stackless, Python for .NET, PyPy, python-safethread, Unladen Swallow, tinypy.</p>
+
+<h1>Python: advantages and disadvantages of the language</h1>
+
+<p>Python - интерпретируемый язык программирования. С одной стороны, это позволяет значительно упростить отладку программ, с другой - обуславливает сравнительно низкую скорость выполнения.</p>
+<p>Dynamic typing. In python, you do not need to declare the type of a variable in advance, which is very convenient during development.</p>
+<p>Good modularity support. You can easily write your own module and use it in other programs.</p>
+<p>Native support for Unicode in strings. In Python, it is not necessary to write everything in English; your native language may well be used in programs.</p>
+<p>Support for object-oriented programming. At the same time, its implementation in python is one of the most understandable.</p>    
+</section>
+       <script>
+
+        let navLinks = document.getElementById('navLinks');
+        function showMenu() {
+          navLinks.style.right = '0';
+        }
+        function hideMenu() {
+          navLinks.style.right = '-200px';
+        }
+      </script>
+      
+      <script src="https://kit.fontawesome.com/553acfa497.js" crossorigin="anonymous"></script>
+      
+</body>
+</html>

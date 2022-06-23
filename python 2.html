@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYTHON 2</title>
+    
+    <link rel="stylesheet" href="style/sostavy.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <i class="fas fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="uchastnitsy.html">TESTS</a></li>
+          <li><a href="gallery.html">TEXTS</a></li>
+          <li><a href="video.html">VIDEO LESSONS</a></li>
+        
+        </ul>
+      </div>
+      <i class="fas fa-bars" onclick="showMenu()"></i>
+  </header>
+
+      <section class="main">
+        <h1 class="h1">PYTHON 2</h1>
+
+        <style>
+          span.quest {font-weight: bold;}
+          label {margin-left: 15px;}
+          .nav {font-size: 17px;}
+      </style>
+      <div style="border: 2px solid black; padding: 10px; overflow:auto;">
+          <div style="display:flex; justify-content: space-between;">
+          </div>
+      <script>
+      // Заголовок страницы (h2)
+      // Это ваши вопросы
+      var questions=[
+      {
+        text: "1 QUESTION: What does the following code do? <br> def a(b, c, d): pass",
+        answers: ["Defines a list and initializes it.",
+            "Defines a function that does nothing.",
+            "Defines a function that passes parameters."],
+        correctAnswer: 1 // нумерация ответов с нуля!
+      },
+      {
+        text: "2 QUESTION: What will the following program output? <br> a = [1,2,3,None,(),[],] <br> print(len(a))",
+        answers: ["4",
+            "5",
+            "6"],
+        correctAnswer: 2
+      },
+      {
+        text: "3 QUESTION: What will be printed? <br> kvps ={'user', 'bill', 'password', 'hillary'} <br> print(kvps['password'])",
+        answers: ["TypeError",
+            "password",
+            "user",
+            "bill",
+            "hillary"],
+        correctAnswer: 0
+      },
+      {
+        text: "4 QUESTION: What will be printed when the following code is executed? Using Python 2.x. <br> print(type(1 / 2))",
+        answers: ["type 'int'",
+            "type 'number'",
+            "type 'double'",
+            "type 'tuple'"],
+        correctAnswer: 0
+      },
+      {
+        text: "5 QUESTION: What will be printed? <br> name = 'snow storm' <br> print('%s' % name[6:8])",
+        answers: ["st",
+            "sto",
+            "to"],
+        correctAnswer: 2
+      }
+      ];
+      
+      var yourAns = new Array;
+      var score = 0;
+      
+      function Engine(question, answer) {yourAns[question]=answer;}
+      
+      function Score(){
+         var answerText = "Результаты:\n";
+         for(var i = 0; i < yourAns.length; ++i){
+        var num = i+1;
+        answerText=answerText+"\n    Вопрос №"+ num +"";
+        if(yourAns[i]!=questions[i].correctAnswer){
+            answerText=answerText+"\n    Правильный ответ: " +
+          questions[i].answers[questions[i].correctAnswer] + "\n";
+          }
+              else{
+            answerText=answerText+": Верно! \n";
+            ++score;
+            }
+             }
+      
+         answerText=answerText+"\nВсего правильных ответов: "+score+"\n";
+      
+         alert(answerText);
+         yourAns = [];
+         score = 0;
+         clearForm("quiz");
+      }
+      function clearForm(name) {
+         var f = document.forms[name];
+         for(var i = 0; i < f.elements.length; ++i) {
+        if(f.elements[i].checked)
+          f.elements[i].checked = false;
+      }
+      }
+      </script>
+      <h2><script>document.write(title)</script></h2>
+      <h3><script>document.write(subtitle)</script></h3>
+      
+          <form name="quiz">
+          <ol>
+              <script>
+              for(var q=0; q<questions.length; ++q) {
+                 var question = questions[q];
+                 var idx = 1 + q;
+      
+                 document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+                 for(var i in question.answers) {
+                  document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+                  '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+              }
+                  document.writeln('</li>');
+              }
+              </script>
+          </ol>
+              <br>
+              <input type="button" onClick="Score()" value="Проверить результаты">
+          </form>
+      </div>
+
+      </section>
+       
+       <script>
+      let navLinks = document.getElementById('navLinks');
+        function showMenu() {
+          navLinks.style.right = '0';
+        }
+        function hideMenu() {
+          navLinks.style.right = '-200px';
+        }
+      </script>
+      
+      <script src="https://kit.fontawesome.com/553acfa497.js" crossorigin="anonymous"></script>
+      
+</body>
+</html>

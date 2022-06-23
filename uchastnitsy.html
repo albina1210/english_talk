@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESTS</title>
+  <link rel="stylesheet" href="style/uchastnitsy.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <i class="fas fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="uchastnitsy.html">TESTS</a></li>
+            <li><a href="gallery.html">TEXTS</a></li>
+            <li><a href="video.html">VIDEO LESSONS</a></li>
+          
+          </ul>
+      </div>
+      <i class="fas fa-bars" onclick="showMenu()"></i>
+  </header>
+  <section class="campus">
+    <h1 class="h1">TESTS</h1>
+    <div class="campus_flex">
+      <div class="campus-col">
+        <div class="layer">
+          <h3><b>PYTHON 1</b></h3>
+          <a href="sostavy.html"><img src="./image/acters/pot.jpg" alt="london"></a>
+        </div>
+      </div>
+
+      <div class="campus-col">
+        <img src="./image/acters/ron.jpg" alt="New York">
+        <div class="layer">
+          <h3><b>PYTHON 2</b></h3>
+          <a href="python 2.html"><img src="./image/acters/ron.jpg" alt="New York"></a>
+        </div>
+      </div>
+
+      <div class="campus-col">
+        <img src="./image/acters/ger.jpg" alt="Washington">
+        <div class="layer">
+          <h3><b>PYTHON 3</b></h3>
+          <a href="python 3.html"><img src="./image/acters/ger.jpg" alt="Washington"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- end campus -->
+
+  <script>
+
+    let navLinks = document.getElementById('navLinks');
+    function showMenu() {
+      navLinks.style.right = '0';
+    }
+    function hideMenu() {
+      navLinks.style.right = '-200px';
+    }
+  </script>
+
+  <script src="https://kit.fontawesome.com/553acfa497.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
